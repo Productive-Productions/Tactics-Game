@@ -1,0 +1,61 @@
+% Main
+%   Sections should be created as seperate .tex files and included using \input{filename} under Sections
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+
+% Fancyhdr settings
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+
+% \subsubsubsection capabilities
+\newcommand{\subsubsubsection}[1]{\paragraph{#1}}
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+
+% Title information
+\title{Isometric Turn Based Tactics Game\\
+       \large Game Design Document v0.1}
+\author{William Brown \and Constantine Ziogas}
+\date{September 2018}
+
+% The page number links back to the table of contents
+\fancyfoot[CO]{\hyperref[toc-contents]{\thepage}}
+
+% Start at Section 0 - Document Version History
+\setcounter{section}{-1}
+
+% Begin Document
+\begin{document}
+
+    % Title Page
+    \begin{titlepage}
+        \maketitle
+        \thispagestyle{empty}
+    \end{titlepage}
+    \newpage
+    
+    % Table of contents
+    \tableofcontents
+    \label{toc-contents}
+    \newpage
+    
+    % Sections
+    \input{Sections/Section00-Document_Version_History.tex}
+    \input{Sections/Section00-Document_Version_History.tex}
+    \input{Sections/Section01-Game_Overview.tex}
+    \input{Sections/Section02-Gameplay_and_Mechanics.tex}
+    \input{Sections/Section03-Story_Setting_and_Characters.tex}
+    \input{Sections/Section04-Levels.tex}
+    \input{Sections/Section05-Interface.tex}
+    \input{Sections/Section06-Artificial_Intelligence.tex}
+    \input{Sections/Section07-Technical.tex}
+    \input{Sections/Section08-Game_Art.tex}
+    \input{Sections/Section09-Management.tex}
+    \input{Sections/Section10-Appendices.tex}
+
+\end{document}
